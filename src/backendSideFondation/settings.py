@@ -22,6 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECURITY WARNING: Be careful this secret key is not the real if you use encrypted field in database
+# BSF : The secret key is replaced with encrypt functionnality. Change it in production if you are using 
+# Web and admin  applications.
 SECRET_KEY = 'jdlveoxk_or^847zk6phm$=jyvl$#gv#npw8$(!xx(ak7o+%qq'
 
 

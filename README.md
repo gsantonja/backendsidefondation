@@ -13,6 +13,11 @@ Part A : The standalone appplication : the standalone application is called `a_p
 
 Part B : The replace script : the replace script will generate your application code based on `a_p_p_l_i_c_a_t_i_o_n_N_a_m_e` code and the ini file. After generating this application you will need to customize it<br>
 
+
+
+*WARNING*
+YOU WILL NEED TO REPLACE THE secret_key in settings.py OR if you are using the encrypt functionnality modify the secret_key and  cryptography_key in file ./src/fondation/paswd/passwd_user.ini before using in production.
+
 Installation
 ============
 
