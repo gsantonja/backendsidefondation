@@ -7,6 +7,7 @@ import time
 import logging
 import datetime
 import pickle
+import base64
 
 from logging.handlers import RotatingFileHandler
 
@@ -115,7 +116,9 @@ class DataAccessCoreLoginData:
                     logger.info("ok")
                     self.dataDecrypt = datadecrypt
                     return True
-                except:
+                except OSError as e:
+                    raise e
+                    exit(1)
                     logger.info("password error for {}".format(login))
                     self.wLabel.value='erreur de mot de passe'
                     self.dataDecrypt = None

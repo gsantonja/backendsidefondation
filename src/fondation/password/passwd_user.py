@@ -23,7 +23,7 @@ def configRead(sel,configName):
 
 if __name__=="__main__":
     # TODO : create a real script .
-    # this script create a password file with one user 
+    # this script create a password file with one user
 
     # retrieve path
     scriptdir = os.path.dirname( os.path.abspath(sys.argv[0]))
@@ -44,7 +44,7 @@ if __name__=="__main__":
     password=defaultini.get('password')
     filepassword = defaultini.get('filepassword')
     secret_key=defaultini.get('secret_key')
-    print (secret_key)
+
     # if you lost the cryptographic key you will lost your data
     cryptography_key=defaultini.get('cryptography_key')
 
@@ -52,7 +52,7 @@ if __name__=="__main__":
     userList1=[]
     userLine1={}
     # you can't decrypt ot much fiel because simplecrypt have a cooldown of 2s
-    userLine1['cryptline']="['{}','{}']".format('jdlveoxk_or^847zk6phm$=jyvl$#gv#npw8$(!xx(ak7o+%qq','Vary-Reborn-Twisted-Angry')
+    userLine1['cryptline']="['{}','{}']".format(secret_key,cryptography_key)
     userLine1['cryptline'] = userLine1['cryptline'].encode()
     userLine1['cryptline'] = encrypt(password, userLine1['cryptline'])
     userLine1['login']="{}".format(login)

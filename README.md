@@ -29,9 +29,11 @@ in ./myenv/bin
 
     source ./activate
 
-it's work with python version 3.7.3
+it's work with python version 3.7.3 on linux. You may need to install python3-dev and gcc
 
-    pip install django npyscreen django-cryptography simple-crypt
+    pip install django npyscreen django-cryptography simple-crypt django_extensions
+
+
 
 if you have a problem please check the version with requirements.txt
 go to backendSideFondation/src
